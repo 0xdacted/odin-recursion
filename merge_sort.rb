@@ -38,8 +38,12 @@ def merge(arr1, arr2, arr_final)
       arr_final[c] = arr2[b]
       b += 1
       c += 1
-
+    end
   end
+  if a == arr1_length 
+    arr_final[c...arr1_length + arr2_length] = arr2[b...arr2_length]
+  elsif b == arr2_length 
+    arr_final[c...arr1_length + arr2_length] = arr1[a...arr1_length]
 end
 return arr_final
 end

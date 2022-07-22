@@ -1,16 +1,21 @@
 def merge_sort(array)
   left_side = []
   right_side = []
-  
-  array.each_with_index do |element, index|
-    if index < array.length/2 
-      left_side[index] = element
+  i = 0
+  if array.length < 2
+    return
+  else
+    array.each_with_index do |element, index|
+      if index < array.length/2 
+        left_side[index] = element
 
-    elsif index >= array.length/2
-      i = 0
-      right_side[i] = element
-      i += 1
+      elsif index >= array.length/2
+        right_side[i] = element
+        i += 1
+      end
     end
+    merge_sort(left_side)
+    merge_sort(right_side)
   end
 end
 

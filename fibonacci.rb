@@ -2,10 +2,8 @@ def fibs(n)
 result = []
 i = 0
   until i == n 
-    if i == 0
-      result[i] = 0
-    elsif i == 1
-      result[i] = 1
+    if i < 2
+      result[i] = i
     else
       result[i] = result[i-1] + result[i-2]
     end
@@ -22,4 +20,4 @@ p result
 end
 
 
-fibs_rec(8)
+fibs(8)

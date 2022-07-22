@@ -14,5 +14,12 @@ i = 0
   p result
 end
 
+def fibs_rec(n, result = [])
+return [0,1] if n == 2
+result = fibs_rec(n -1)
+result << result[-1] + result[-2]
+p result
+end
 
-fibs(8)
+
+fibs_rec(8)

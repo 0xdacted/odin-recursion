@@ -28,7 +28,7 @@ def merge(arr1, arr2, arr_final)
   end
   if a == arr1.length
     arr_final[c...arr1.length + arr2.length] = arr2[b...arr2.length]
-  elsif b == arr2_length
+  elsif b == arr2.length
     arr_final[c...arr1.length + arr2.length] = arr1[a...arr1.length]
   end
   arr_final

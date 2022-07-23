@@ -1,8 +1,5 @@
 def merge_sort(array)
-  left_side = []
-  right_side = []
   new_array = []
-  i = 0
   if array.length < 2
     return array
 

@@ -4,20 +4,11 @@ def merge_sort(array)
   new_array = []
   i = 0
   if array.length < 2
-    return
+    return array
 
   else
-    array.each_with_index do |element, index|
-      if index < array.length/2 
-        left_side[index] = element
-
-      elsif index >= array.length/2
-        right_side[i] = element
-        i += 1
-      end
-    end
-    merge_sort(left_side)
-    merge_sort(right_side)
+    left_side = merge_sort(array[0...array.length/2])
+    right_side = merge_sort(array[array.length/2...array.length])
     merge(left_side, right_side, new_array)
   end
   p new_array
@@ -49,5 +40,5 @@ return arr_final
 end
 
 
-array_numbers = [452, 874, 100, 345, 390, 855]
+array_numbers = [452, 874, 100, 345, 390, 855, 1000, 123]
 merge_sort(array_numbers)

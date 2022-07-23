@@ -15,7 +15,7 @@ def merge(arr1, arr2, arr_final)
   a = 0
   b = 0
   c = 0
-  while a < arr1_length && b < arr2_length
+  while a < arr1.length && b < arr2.length
     if arr1[a] < arr2[b]
       arr_final[c] = arr1[a]
       a += 1
